@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tip Calculator</title>
+		<style>
+			body {
+				background-color: antiquewhite;
+			}
+
+			.calculatorArea {
+				margin: 0 auto;
+				display: flex;
+				width: 500px;
+				border: 1px solid lightgray;
+				padding: 15px;
+				justify-content: space-between;
+				flex-flow: row wrap;
+				gap: 10px;
+			}
+
+			.billFields,
+			.resultArea {
+				width: 45%;
+				gap: 10px;
+				display: flex;
+				flex-flow: column wrap;
+			}
+
+			.formGroup {
+				display: flex;
+				flex-flow: column wrap;
+			}
+
+			.formGroup label {
+				margin-bottom: 3px;
+			}
+
+			.formGroup input[type="text"] {
+				padding: 5px;
+				height: 20px;
+				background-color: antiquewhite;
+				border: 1px solid darkgray;
+			}
+
+			.formGroup input[type="text"]:focus-visible {
+				outline: none;
+			}
+
+			.resultItem {
+				text-align: center;
+			}
+
+			.resultItem>span {
+				color: gray;
+			}
+
+			.resultItem h2.amount {
+				margin: 0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<form action="post" class="tipCalculator">
+			<div class="calculatorArea">
+				<div class="billFields">
+					<div class="formGroup">
+						<label for="bill">Bill</label>
+						<input type="text" name="bill" id="bill" placeholder="100">
+					</div>
+					<div class="formGroup">
+						<label for="tip">Tip %</label>
+						<input type="text" name="tip" id="tip" placeholder="15">
+					</div>
+					<div class="formGroup">
+						<label for="person">Person</label>
+						<input type="text" name="person" id="person" placeholder="1">
+					</div>
+				</div>
+				<div class="resultArea">
+					<div class="resultItem">
+						<span>Tip</span>
+						<h2 class="amount tipAmount">BDT <span>0.00</span></h2>
+						<span>Per Person</span>
+					</div>
+					<div class="resultItem">
+						<span>Total</span>
+						<h2 class="amount totalAmount">BDT <span>0.00</span></h2>
+						<span>Per Person</span>
+					</div>
+				</div>
+			</div>
+		</form>
+		<script src="./index.js"></script>
+	</body>
+
+</html>
